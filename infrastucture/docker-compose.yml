@@ -1,0 +1,14 @@
+version: "3"
+services:
+  api:
+    image: php:7-apache
+    volumes:
+      - ../api:/var/www/html/
+    ports:
+      - "8080:80"
+  frontend:
+    image: php:7-apache
+    volumes:
+      - ../frontend:/var/www/html/
+    ports:
+      - "8081:80"
