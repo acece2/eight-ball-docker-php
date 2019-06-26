@@ -3,9 +3,10 @@
 $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri = parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
 
-if ($httpMethod == "GET" && $uri == "/api/question")
+if ($httpMethod == "POST" && $uri == "/eight-ball-docker-php/api/index.php")
 {
-    getResponse();
+    $message = getResponse();
+    echo $message;
 } else {
     echo "404 URL NOT FOUND";
 }
